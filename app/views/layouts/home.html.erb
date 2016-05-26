@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+<div class="top-bar">
+<div class="top-bar-left">
+<ul class="menu">
+<li class="menu-text">Menu</li>
+<li><a href="/home">Home</a>
+<li><a href="/works">Works</a>
+<li><a href="/about">About us</a>
+<li><a href="/contact">Contact us</a>
+  
+</ul>
+</div>
+</ul>
+</div>
+</div>
+ 
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+<ul class="orbit-container">
+<button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+<li class="orbit-slide is-active">
+<img src="https://sojo.net/sites/default/files/styles/hero/public/blog/shutterstock_162447488.jpg?itok=1OyqSCxQ">
+</ul>
+</div>
+<div class="row column text-center">
+
+    <%= yield %>
+
+
+
+<h2>Jaanapp</h2>
+<script>
+$( document ).click(function() {
+  $( "#toggle" ).toggle( "highlight" );
+});
+</script>
+
+<hr>
+<div class="column">
+<img class="thumbnail" src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/11373677_596487903836406_1608977162_n.jpg?ig_cache_key=MTIwMTQ4MDk0ODUwNDUxNzk0MA%3D%3D.2">
+<h5 id="nombreAndrea">Andrea Aranda</h5>
+</div>
+<div class="column">
+<img class="thumbnail" src="https://scontent.cdninstagram.com/t51.2885-15/s320x320/e15/10919232_400654916764629_2047692834_n.jpg?ig_cache_key=OTEzODc0OTMyNDEyMjY5NTM0.2">
+<h5 id="nombreJavier">Javier Gordillo</h5>
+<hr>
+<div class="row column">
+<div class="callout primary">
+<h3>Thank you for viewing </h3>
+</div>
+</div>
+<hr>
+<div class="row column text-center">
+<h2>Some brands we worked with </h2>
+<hr>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-6">
+<div class="column">
+<img class="thumbnail" src="http://vignette4.wikia.nocookie.net/logopedia/images/3/3e/Chips-ahoy-profile.jpg/revision/latest?cb=20120624135633">
+<h5>Chips Ahoy</h5>
+</div>
+<div class="column">
+<img class="thumbnail" src="http://www.drankgigant.nl/media/catalog/product/cache/1/image/300x400/9df78eab33525d08d6e5fb8d27136e95/f/r/freixenet_cordon_negro.png">
+<h5>Freixenet</h5>
+</div>
+<div class="column">
+<img class="thumbnail" src="http://www.bmwarchiv.de/img/prospekt/5112009992015.jpg">
+<h5>BMW</h5>
+</div>
+<div class="column">
+<img class="thumbnail" src="https://wallpaperscraft.com/image/mercedes_benz_daimler_cls_amg_83263_300x400.jpg">
+<h5>Mercedes Benz</h5>
+</div>
+<div class="column">
+<img class="thumbnail" src="http://storage.googleapis.com/cdn-free-ca/wp-content/uploads/2016/01/take-the-activia-challenge-300x400.jpg">
+<h5>Activia</h5>
+</div>
+<div class="column">
+<img class="thumbnail" src="http://i.ebayimg.com/00/s/NTAwWDM3NQ==/z/mK4AAOSwYlJW15IS/$_1.JPG?set_id=8800005007">
+<h5>Ferrero Rocher</h5>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="medium-4 columns">
+
+</ul>
+</div>
+</div>
+</div>
+
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  </body>
+</html>
